@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Portrait";
+    font-weight: 300;
+    src: url('/wp-content/themes/northport/fonts/portrait/Portrait-Light.otf') format('opentype');
+}
+@font-face {
+    font-family: "Portrait";
+    font-weight: 400;
+    src: url('/wp-content/themes/northport/fonts/portrait/Portrait-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: "Portrait";
+    font-weight: 500;
+    src: url('/wp-content/themes/northport/fonts/portrait/Portrait-Medium.otf') format('opentype');
+}
+@font-face {
+    font-family: "Portrait";
+    font-weight: 700;
+    src: url('/wp-content/themes/northport/fonts/portrait/Portrait-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: "Portrait";
+    font-weight: 900;
+    src: url('/wp-content/themes/northport/fonts/portrait/Portrait-Heavy.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "Prata";
+    font-weight: 400;
+    src: url('/wp-content/themes/northport/fonts/prata/Prata-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Pontano Sans";
+    font-weight: 400;
+    src: url('/wp-content/themes/northport/fonts/pontano_sans/PontanoSans-Regular.ttf') format('truetype');
+}
+
+html,
+body{
+    font-family: "Pontano Sans", sans-serif !important;
+}

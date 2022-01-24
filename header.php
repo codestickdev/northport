@@ -25,35 +25,22 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'nortphort' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$nortphort_description = get_bloginfo( 'description', 'display' );
-			if ( $nortphort_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $nortphort_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
+	<header id="masthead" class="siteHeader">
+		<div class="siteHeader__wrap">
+			<div class="siteHeader__left">
+				<?php wp_nav_menu(array('theme_location' => 'menu-left')); ?>
+			</div>
+			<div class="siteHeader__logo">
+				<a href="<?php echo home_url(); ?>">
+					<img src="<?php echo get_template_directory_uri() . '/images/logo_white.svg'; ?>"/>
+				</a>
+			</div>
+			<div class="siteHeader__right">
+				<?php wp_nav_menu(array('theme_location' => 'menu-right')); ?>
+			</div>
+		</div>
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'nortphort' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
+			
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

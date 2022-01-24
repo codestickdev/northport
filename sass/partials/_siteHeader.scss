@@ -1,0 +1,114 @@
+.siteHeader{
+    display: block;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.35);
+    position: absolute;
+    z-index: 3;
+    top: 50px;
+    min-height: 100px;
+
+    &__wrap{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        max-width: 900px;
+        min-height: inherit;
+        margin: 0 auto;
+    }
+
+    &__logo{
+        width: 180px;
+        min-height: inherit;
+        position: relative;
+
+        a{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .8;
+            }
+        }
+    }
+    &__left,
+    &__right{
+        display: flex;
+        align-items: center;
+        width: calc(50% - 90px);
+        min-height: inherit;
+
+        &>div{
+            width: 100%;
+        }
+
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+
+            li{
+
+                a{
+                    font-size: 16px;
+                    line-height: 1;
+                    color: #fff;
+                    text-transform: uppercase;
+                    position: relative;
+                    padding-bottom: 20px;
+
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 1px;
+                        bottom: 10px;
+                        left: 0;
+                        background-color: #2F416B;
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                        z-index: 1;
+                    }
+
+                    &:before{
+                        content: '';
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 100%;
+                        border: 1px solid #BCA58A;
+                        position: absolute;
+                        bottom: 2px;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        z-index: 2;
+                        opacity: 0;
+                        transform: translate(0, 100%);
+                        transition: ease .25s;
+                    }
+
+                    &:hover{
+                        &:after{
+                            transform: scaleX(1);
+                            transform-origin: bottom left;
+                        }
+                        &:before{
+                            transform: translate(0, 0);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

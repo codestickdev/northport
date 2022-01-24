@@ -49,7 +49,17 @@ function nortphort_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'nortphort' ),
+			'menu-left' => esc_html__( 'Left', 'nortphort' ),
+		)
+	);
+	register_nav_menus(
+		array(
+			'menu-right' => esc_html__( 'Right', 'nortphort' ),
+		)
+	);
+	register_nav_menus(
+		array(
+			'menu-mobile' => esc_html__( 'Mobile', 'nortphort' ),
 		)
 	);
 
@@ -157,25 +167,21 @@ add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 
 /**
- * Custom styles / scriptrs
+ * Enqueue scripts and styles.
  */
-function nortphort_custom() {
+function nortphort_scripts() {
 	wp_enqueue_style( 'nortphort-custom-css', get_template_directory_uri() . '/css/custom.css', array(), _S_VERSION );
+	wp_enqueue_style( 'nortphort-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'nortphort-style', 'rtl', 'replace' );
 
 	wp_register_script( 'jquery', get_template_directory_uri() . '/plugins/jQuery/jquery-3.6.0.min.js', null, null, true );
 	wp_enqueue_script('jquery');
 	wp_register_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', null, null, true );
 	wp_enqueue_script('custom-js');
-}
-add_action( 'wp_enqueue_scripts', 'nortphort_custom' );
 
-
-/**
- * Enqueue scripts and styles.
- */
-function nortphort_scripts() {
-	wp_enqueue_style( 'nortphort-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'nortphort-style', 'rtl', 'replace' );
+	// Counter
+	wp_register_script( 'counter', get_template_directory_uri() . '/plugins/counter/jQuerySimpleCounter.js', null, null, true );
+	wp_enqueue_script('counter');
 
 	wp_enqueue_script( 'nortphort-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -184,6 +190,15 @@ function nortphort_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'nortphort_scripts' );
+
+
+/**
+ * WP Admin bar margin delete.
+ */
+add_action('get_header', 'filter_head');
+function filter_head() {
+   remove_action('wp_head', '_admin_bar_bump_cb');
+} 
 
 /**
  * Implement the Custom Header feature.
@@ -212,3 +227,32 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Enable upload for webp image files.
+ */ 
+function webp_upload_mimes($existing_mimes) {
+    $existing_mimes['webp'] = 'image/webp';
+    return $existing_mimes;
+}
+add_filter('mime_types', 'webp_upload_mimes');
+
+/**
+ * Enable preview / thumbnail for webp image files.
+ */
+function webp_is_displayable($result, $path) {
+    if ($result === false) {
+        $displayable_image_types = array( IMAGETYPE_WEBP );
+        $info = @getimagesize( $path );
+
+        if (empty($info)) {
+            $result = false;
+        } elseif (!in_array($info[2], $displayable_image_types)) {
+            $result = false;
+        } else {
+            $result = true;
+        }
+    }
+
+    return $result;
+}
+add_filter('file_is_displayable_image', 'webp_is_displayable', 10, 2);

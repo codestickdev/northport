@@ -451,6 +451,24 @@ body {
 .mainApartaments__photo .area__floor {
   width: 100%;
   position: absolute;
+  outline: none;
+}
+
+.mainApartaments__photo .area__floor:after {
+  content: '';
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  transition: ease .3s;
+}
+
+.mainApartaments__photo .area__floor:hover:after {
+  opacity: .8;
+}
+
+.mainApartaments__photo .area__floor:hover svg path {
+  opacity: .5;
 }
 
 .mainApartaments__photo .area__floor svg {
@@ -459,6 +477,7 @@ body {
 
 .mainApartaments__photo .area__floor svg path {
   cursor: pointer;
+  outline: none;
   transition: ease .3s;
 }
 
@@ -471,9 +490,272 @@ body {
   margin-top: 6.8%;
 }
 
-.mainApartaments__photo .area__floor--zero {
+.mainApartaments__photo .area__floor--one:after {
+  background-image: url("/wp-content/themes/northport/images/frontpage/typ_pointer_01.svg");
+  width: 26.4%;
+  height: 26.4%;
+  left: -25%;
+  right: 0;
+  top: -1%;
+  margin: 0 auto;
+}
+
+.mainApartaments__photo .area__floor--two {
   max-width: 82.5%;
   margin-top: 23.4%;
+}
+
+.mainApartaments__photo .area__floor--two:after {
+  background-image: url("/wp-content/themes/northport/images/frontpage/typ_pointer_02.svg");
+  width: 23.5%;
+  height: 30%;
+  right: -8%;
+  bottom: 23%;
+}
+
+.mainApartaments__heading {
+  max-width: 742px;
+  background-color: #2F416B;
+  text-align: center;
+  min-height: 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  top: -58px;
+}
+
+.mainApartaments__heading h2 {
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.mainApartaments__info .apInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.mainApartaments__info .apInfo__type {
+  width: calc(100% / 2);
+}
+
+.mainApartaments__info .apInfo__type .heading {
+  border-bottom: 2px solid #2F416B;
+  transition: ease .3s;
+}
+
+.mainApartaments__info .apInfo__type .heading h3 {
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #BCA58A;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.mainApartaments__info .apInfo__type .content {
+  margin-top: 15px;
+}
+
+.mainApartaments__info .apInfo__type .content__open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+.mainApartaments__info .apInfo__type .content__open:hover {
+  opacity: .7;
+}
+
+.mainApartaments__info .apInfo__type--active .heading {
+  border-color: #BCA58A;
+}
+
+.mainApartaments__info .apInfo__type--active .content .content__open {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mainApartaments__info .apInfo__info {
+  display: none;
+  border: 1px solid #2F416B;
+  max-width: calc(100% - 10px);
+  margin: 0 auto;
+  padding: 32px 30px 18px;
+}
+
+.mainApartaments__info .apInfo__slider {
+  border: 1px solid #BCA58A;
+}
+
+.mainApartaments__info .apInfo__slider .slick-arrow {
+  width: 13px;
+  height: 24px;
+  transition: ease .3s;
+}
+
+.mainApartaments__info .apInfo__slider .slick-arrow:hover {
+  opacity: .5;
+}
+
+.mainApartaments__info .apInfo__slider .slick-arrow:before {
+  display: none;
+}
+
+.mainApartaments__info .apInfo__slider .slick-arrow:after {
+  content: '';
+  background-image: url("/wp-content/themes/northport/images/slider_arrow_blue.svg");
+  background-repeat: no-repeat;
+  background-size: 13px;
+  width: 13px;
+  height: 24px;
+  display: block;
+}
+
+.mainApartaments__info .apInfo__slider .slick-arrow.slick-prev:after {
+  transform: rotate(180deg);
+}
+
+.mainApartaments__info .apInfo__slider .slide {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 26px 10px;
+  margin: 0 3px;
+}
+
+.mainApartaments__info .apInfo__slider .slide__left {
+  width: 48%;
+}
+
+.mainApartaments__info .apInfo__slider .slide__left p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.mainApartaments__info .apInfo__slider .slide__left p:last-of-type {
+  margin: 0;
+}
+
+.mainApartaments__info .apInfo__slider .slide__left p .value {
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: none;
+  color: #BCA58A;
+}
+
+.mainApartaments__info .apInfo__slider .slide__right {
+  width: 52%;
+}
+
+.mainApartaments__info .apInfo__slider .slide__right img {
+  width: 100%;
+}
+
+.mainApartaments__info .apInfo__slider .slide__right .actions {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainApartaments__info .apInfo__slider .slide__right .actions a {
+  margin: 0 6px;
+  transition: ease .3s;
+}
+
+.mainApartaments__info .apInfo__slider .slide__right .actions a:hover {
+  opacity: .7;
+}
+
+.mainApartaments__info .apInfo__availability {
+  padding: 46px 0 27px;
+}
+
+.mainApartaments__info .apInfo__availability .btn {
+  padding: 0 13px;
+  min-height: 39px;
+  border: 1px solid #BCA58A;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  max-width: -moz-max-content;
+  max-width: -webkit-fit-content;
+  margin: 0 auto;
+  position: relative;
+  transition: ease .3s;
+}
+
+.mainApartaments__info .apInfo__availability .btn:hover {
+  background-color: #BCA58A;
+}
+
+.mainApartaments__info .apInfo__availability .btn:hover:before {
+  left: -23px;
+}
+
+.mainApartaments__info .apInfo__availability .btn:hover:after {
+  right: -23px;
+}
+
+.mainApartaments__info .apInfo__availability .btn:hover span {
+  color: #fff;
+}
+
+.mainApartaments__info .apInfo__availability .btn:before, .mainApartaments__info .apInfo__availability .btn:after {
+  content: '';
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  border: 1px solid #2F416B;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: ease .3s;
+  pointer-events: none;
+}
+
+.mainApartaments__info .apInfo__availability .btn:before {
+  left: -8px;
+}
+
+.mainApartaments__info .apInfo__availability .btn:after {
+  right: -8px;
+}
+
+.mainApartaments__info .apInfo__availability .btn span {
+  font-size: 16px;
+  line-height: 1;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 1px;
+  transition: ease .3s;
+}
+
+.mainApartaments__info .apInfo__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+.mainApartaments__info .apInfo__close:hover {
+  opacity: .6;
 }
 
 html {

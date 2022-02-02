@@ -68,4 +68,50 @@
             count();
         });
     });
+
+    /**
+     * Apartaments area
+     */
+    $(document).ready(function(){
+        $('.area__floor').on('click', function(){
+            var type = $(this).attr('data-type');
+            var apartamentsInfo = $('.mainApartaments__heading');
+            $('html, body').animate({scrollTop: apartamentsInfo.offset().top}, 'slow');
+            $('.apInfo__type[data-type="' + type + '"]').find('.content__open').click();
+        });
+    });
+
+    /**
+     * Apartaments info
+     */
+    $(document).ready(function(){
+        $('.content__open').on('click', function(){
+            var parent = $(this).parents('.apInfo__type');
+            parent.addClass('apInfo__type--active');
+            parent.find('.apInfo__info').slideDown('slow');
+        });
+        $('.apInfo__close').on('click', function(){
+            var parent = $(this).parents('.apInfo__type');
+            parent.find('.apInfo__info').slideUp('slow');
+
+            setTimeout(function(){
+                parent.removeClass('apInfo__type--active');
+            }, 700);
+        });
+    });
+
+    /**
+     * Apartaments info slider
+     */
+    $(document).ready(function(){
+        $('.apInfo__slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            centerMode: true,
+            variableWidth: true,
+        });
+    });
+
 }(jQuery));

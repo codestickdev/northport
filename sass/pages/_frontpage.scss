@@ -224,12 +224,34 @@
             &__floor{
                 width: 100%;
                 position: absolute;
+                outline: none;
+
+                &:after{
+                    content: '';
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    position: absolute;
+                    transition: ease .3s;
+                }
+
+                &:hover{
+                    &:after{
+                        opacity: .8;
+                    }
+                    svg{
+                        path{
+                            opacity: .5;
+                        }
+                    }
+                }
 
                 svg{
                     width: 100%;
 
                     path{
                         cursor: pointer;
+                        outline: none;
                         transition: ease .3s;
 
                         &:hover{
@@ -241,10 +263,271 @@
                 &--one{
                     max-width: 72%;
                     margin-top: 6.8%;
+
+                    &:after{
+                        background-image: url('/wp-content/themes/northport/images/frontpage/typ_pointer_01.svg');
+                        width: 26.4%;
+                        height: 26.4%;
+                        left: -25%;
+                        right: 0;
+                        top: -1%;
+                        margin: 0 auto;
+                    }
                 }
-                &--zero{
+                &--two{
                     max-width: 82.5%;
                     margin-top: 23.4%;
+
+                    &:after{
+                        background-image: url('/wp-content/themes/northport/images/frontpage/typ_pointer_02.svg');
+                        width: 23.5%;
+                        height: 30%;
+                        right: -8%;
+                        bottom: 23%;
+                    }
+                }
+            }
+        }
+    }
+    &__heading{
+        max-width: 742px;
+        background-color: $blue;
+        text-align: center;
+        min-height: 116px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+        position: relative;
+        top: -58px;
+
+        h2{
+            font-size: 20px;
+            line-height: 26px;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            margin: 0 0 10px;
+        }
+    }
+    &__info{
+        .apInfo{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            &__type{
+                width: calc(100% / 2);
+
+                .heading{
+                    border-bottom: 2px solid $blue;
+                    transition: ease .3s;
+
+                    h3{
+                        font-size: 20px;
+                        line-height: 26px;
+                        text-transform: uppercase;
+                        color: $brown;
+                        text-align: center;
+                        margin: 0 0 10px;
+                    }
+                }
+                .content{
+                    margin-top: 15px;
+
+                    &__open{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: ease .3s;
+
+                        &:hover{
+                            opacity: .7;
+                        }
+                    }
+                }
+
+                &--active{
+                    .heading{
+                        border-color: $brown;
+                    }
+                    .content{
+                        .content__open{
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+            &__info{
+                display: none;
+                // min-height: 400px;
+                border: 1px solid $blue;
+                max-width: calc(100% - 10px);
+                margin: 0 auto;
+                padding: 32px 30px 18px;
+            }
+            &__slider{
+                border: 1px solid $brown;
+
+                .slick-arrow{
+                    width: 13px;
+                    height: 24px;
+                    transition: ease .3s;
+                    
+                    &:hover{
+                        opacity: .5;
+                    }
+
+                    &:before{
+                        display: none;
+                    }
+                    &:after{
+                        content: '';
+                        background-image: url('/wp-content/themes/northport/images/slider_arrow_blue.svg');
+                        background-repeat: no-repeat;
+                        background-size: 13px;
+                        width: 13px;
+                        height: 24px;
+                        display: block;
+                    }
+
+                    &.slick-prev{
+                        &:after{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                .slide{
+                    display: flex;
+                    justify-content: space-between;
+                    // border: 1px solid $brown;
+                    padding: 30px 26px 10px;
+                    margin: 0 3px;
+
+                    &__left{
+                        width: 48%;
+
+                        p{
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: #000;
+                            text-transform: uppercase;
+                            margin: 0 0 8px;
+
+                            &:last-of-type{
+                                margin: 0;
+                            }
+
+                            .value{
+                                font-size: 20px;
+                                line-height: 26px;
+                                text-transform: none;
+                                color: $brown;
+                            }
+                        }
+                    }
+                    &__right{
+                        width: 52%;
+
+                        img{
+                            width: 100%;
+                        }
+                        .actions{
+                            margin-top: 5px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            a{
+                                margin: 0 6px;
+                                transition: ease .3s;
+
+                                &:hover{
+                                    opacity: .7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__availability{
+                padding: 46px 0 27px;
+    
+                .btn{
+                    padding: 0 13px;
+                    min-height: 39px;
+                    border: 1px solid $brown;
+                    border-radius: 25px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    max-width: fit-content;
+                    max-width: -moz-max-content;
+                    max-width: -webkit-fit-content;
+                    margin: 0 auto;
+                    position: relative;
+                    transition: ease .3s;
+
+                    &:hover{
+                        background-color: $brown;
+
+                        &:before{
+                            left: -23px;
+                        }
+                        &:after{
+                            right: -23px;
+                        }
+
+                        span{
+                            color: #fff;
+                        }
+                    }
+
+                    &:before,
+                    &:after{
+                        content: '';
+                        width: 17px;
+                        height: 17px;
+                        border-radius: 100%;
+                        border: 1px solid $blue;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                        transition: ease .3s;
+                        pointer-events: none;
+                    }
+
+                    &:before{
+                        left: -8px;
+                    }
+                    &:after{
+                        right: -8px;
+                    }
+                    
+                    span{
+                        font-size: 16px;
+                        line-height: 1;
+                        color: #000;
+                        text-align: center;
+                        text-transform: uppercase;
+                        padding-top: 1px;
+                        transition: ease .3s;
+                    }
+                }
+            }
+            &__close{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: ease .3s;
+
+                &:hover{
+                    opacity: .6;
                 }
             }
         }

@@ -29,6 +29,7 @@
             right: 0;
             margin: 0 auto;
             text-align: center;
+            outline: none;
             transition: ease .3s;
 
             &:hover{
@@ -64,6 +65,7 @@
                     color: #fff;
                     text-transform: uppercase;
                     position: relative;
+                    outline: none;
                     padding-bottom: 20px;
 
                     &:after{
@@ -106,6 +108,208 @@
                             transform: translate(0, 0);
                             opacity: 1;
                         }
+                    }
+                }
+            }
+        }
+        .btnMobile{
+            display: none;
+            position: relative;
+            width: 32px;
+            height: 17px;
+            transition: ease .3s;
+            
+            &:after{
+                content: '';
+                background-image: url('/wp-content/themes/northport/images/menuMobileBtn.svg');
+                background-repeat: no-repeat;
+                background-size: 32px;
+                height: 17px;
+                position: relative;
+                display: block;
+            }
+
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .siteHeader{
+        background-color: unset;
+
+        &__wrap{
+            padding: 0 20px;
+        }
+        &__left{
+            width: calc(50% - 50px);
+
+            .menu-menu-left-container{
+                display: none;
+            }
+        }
+        &__logo{
+            width: 100px;
+        }
+        &__right{
+            width: calc(50% - 50px);
+            align-items: flex-start;
+            justify-content: flex-end;
+
+            .menu-menu-right-container{
+                display: none;
+            }
+            .btnMobile{
+                display: block;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .siteHeader{
+        top: 15px;
+
+        &__left,
+        &__right{
+            width: calc(50% - 33px);
+        }
+        &__logo{
+            width: 76px;
+        }
+    }
+}
+
+
+.menuMobile{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease .5s;
+
+    &--ready{
+        right: 0;
+    }
+    &--active{
+        .menuMobile{
+            &__wrap{
+                opacity: 1;
+            }
+        }
+    }
+
+    &__close{
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        transition: ease .3s;
+
+        &:hover{
+            opacity: .7;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__wrap{
+        opacity: 0;
+        transition: ease .3s;
+
+        .menu-menu-right-container{
+            ul{
+                li{
+                    &:last-of-type{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li{
+                text-align: center;
+                margin: 0 0 40px;
+
+                a{
+                    font-family: 'Portrait', sans-serif;
+                    font-size: 28px;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    color: $brown;
+                    padding: 0 15px 5px;
+                    position: relative;
+                    transition: ease .3s;
+
+                    &:before{
+                        content: '';
+                        width: 0;
+                        height: 1px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        background-color: $brown;
+                        transition: ease .5s;
+                    }
+
+                    &:after{
+                        content: '';
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 100%;
+                        border: 1px solid $brown;
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -25px;
+                        margin: 0 auto;
+                        opacity: 0;
+                        transition: ease .5s;
+                    }
+
+                    &:hover{
+                        color: $blue;
+
+                        &:before{
+                            width: 100%;
+                        }
+
+                        &:after{
+                            bottom: -7px;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .menuMobile{
+        &__wrap{
+            ul{
+                li{
+                    margin: 0 0 25px;
+
+                    a{
+                        font-size: 18px;
+                        padding: 0 15px 10px;
                     }
                 }
             }

@@ -165,7 +165,6 @@ function my_acf_google_map_api( $api ){
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
-
 /**
  * Enqueue scripts and styles.
  */
@@ -187,9 +186,18 @@ function nortphort_scripts() {
 	wp_register_script( 'counter', get_template_directory_uri() . '/plugins/counter/jQuerySimpleCounter.js', null, null, true );
 	wp_enqueue_script('counter');
 
+	// Lightbox
+	wp_enqueue_style( 'lightbox-css', get_template_directory_uri() . '/plugins/lightbox/dist/css/lightbox.min.css', array(), _S_VERSION );
+	wp_register_script( 'lightbox-script', get_template_directory_uri() . '/plugins/lightbox/dist/js/lightbox.min.js', null, null, true );
+	wp_enqueue_script('lightbox-script');
+
 	// Custom js
 	wp_register_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', null, null, true );
 	wp_enqueue_script('custom-js');
+
+	// Map js
+	wp_register_script( 'map-js', get_template_directory_uri() . '/js/_map.js', null, null, true );
+	wp_enqueue_script('map-js');
 	
 	wp_enqueue_script( 'nortphort-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 

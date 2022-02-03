@@ -57,5 +57,21 @@ html{
 
 a{
     text-decoration: none;
-    outline: none;
+    outline: none !important;
+}
+
+.lightbox{
+    .lb-image{
+        border: 0 !important;
+    }
+}
+
+.northport{
+    &--main{
+        overflow: hidden;
+    }
+}
+
+#wpadminbar{
+    display: none;
 }

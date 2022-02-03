@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVsxlxHIR-f5y2bHNk-_GmTGvbyBuZW_A"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -31,12 +32,13 @@
 				<?php wp_nav_menu(array('theme_location' => 'menu-left')); ?>
 			</div>
 			<div class="siteHeader__logo">
-				<a href="<?php echo home_url(); ?>">
+				<a href="#top">
 					<img src="<?php echo get_template_directory_uri() . '/images/logo_white.svg'; ?>"/>
 				</a>
 			</div>
 			<div class="siteHeader__right">
 				<?php wp_nav_menu(array('theme_location' => 'menu-right')); ?>
+				<div class="btnMobile"></div>
 			</div>
 		</div>
 		<nav id="site-navigation" class="main-navigation">
@@ -44,3 +46,12 @@
 			
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+	<div class="menuMobile">
+		<div class="menuMobile__close">
+			<img src="<?php echo get_template_directory_uri() . '/images/menuMobileClose.svg'; ?>"/>
+		</div>
+		<div class="menuMobile__wrap">
+			<?php wp_nav_menu(array('theme_location' => 'menu-left')); ?>
+			<?php wp_nav_menu(array('theme_location' => 'menu-right')); ?>
+		</div>
+	</div>

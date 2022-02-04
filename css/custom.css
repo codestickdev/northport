@@ -2231,14 +2231,11 @@ a {
 .lightbox .lb-outerContainer .lb-details {
   position: absolute;
   width: 100%;
-  min-height: 50px;
   bottom: 0;
   left: 0;
-  background-color: #2F416B;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 15px;
   z-index: 5;
 }
 
@@ -2246,6 +2243,10 @@ a {
   font-size: 18px;
   line-height: 23px;
   color: #fff;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #2F416B;
 }
 
 .lightbox .lb-image {

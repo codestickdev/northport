@@ -1,5 +1,12 @@
 (function($){
 
+    /**
+     * Lightbox settings
+     */
+    lightbox.option({
+        'showImageNumberLabel': false,
+    })
+
     /** 
      * Smooth scroll to id
      */

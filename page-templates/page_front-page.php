@@ -265,7 +265,7 @@ get_header(); ?>
                     foreach($images as $image): ?>
                 <div class="mainGallery__photo">
                     <img src="<?php echo $image['url']; ?>"/>
-                    <a href="<?php echo $image['url']; ?>" data-lightbox="mainGallery" >
+                    <a href="<?php echo $image['url']; ?>" data-lightbox="mainGallery" data-title="<?php echo $image['description']; ?>">
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/zoom_gallery_ico.svg'; ?>"/>
                     </a>
                 </div>

@@ -11,7 +11,7 @@
 
     &__wrap{
         padding-bottom: 50px;
-        
+
         h1{
             font-size: 40px;
             line-height: 50px;
@@ -225,7 +225,8 @@
             }
         }
         &--second{
-            margin-top: 21px;
+            margin-top: 20px;
+            padding-bottom: 20px;
 
             .content{
                 max-width: calc(100% - 624px);
@@ -265,7 +266,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: -40px;
+        // margin-top: -40px;
 
         img{
             margin-top: 34px;

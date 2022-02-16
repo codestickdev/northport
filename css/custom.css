@@ -176,6 +176,7 @@ body {
   position: relative;
   outline: none;
   padding-bottom: 20px;
+  text-shadow: 1px 1px 1px #00000057;
 }
 
 .siteHeader__left ul li a:after, .siteHeader__right ul li a:after {

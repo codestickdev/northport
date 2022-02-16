@@ -606,9 +606,13 @@ body {
   position: relative;
 }
 
+.mainHeader__wrap {
+  padding-bottom: 50px;
+}
+
 .mainHeader__wrap h1 {
-  font-size: 50px;
-  line-height: 60px;
+  font-size: 40px;
+  line-height: 50px;
   font-family: 'Portrait', sans-serif;
   font-weight: 400;
   margin: 0 0 10px;
@@ -617,8 +621,8 @@ body {
 }
 
 .mainHeader__wrap p {
-  font-size: 25px;
-  line-height: 32px;
+  font-size: 21px;
+  line-height: 28px;
   font-family: 'Pontano Sans', sans-serif;
   margin: 0;
   text-align: center;

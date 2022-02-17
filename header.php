@@ -46,6 +46,24 @@
 			
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+	<div class="menuFloat">
+		<div class="menuFloat__wrap">
+			<div class="menuFloat__left">
+				<?php wp_nav_menu(array('theme_location' => 'menu-left')); ?>
+			</div>
+			<div class="menuFloat__logo">
+				<a href="#top">
+					<img src="<?php echo get_template_directory_uri() . '/images/frontpage/logo_white_vec.svg'; ?>"/>
+				</a>
+			</div>
+			<div class="menuFloat__right">
+				<?php wp_nav_menu(array('theme_location' => 'menu-right')); ?>
+				<div class="btnMobile"></div>
+			</div>
+		</div>
+	</div>
+
 	<div class="menuMobile">
 		<div class="menuMobile__close">
 			<img src="<?php echo get_template_directory_uri() . '/images/menuMobileClose.svg'; ?>"/>

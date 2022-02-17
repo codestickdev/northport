@@ -276,10 +276,127 @@ body {
     top: 15px;
   }
   .siteHeader__left, .siteHeader__right {
-    width: calc(50% - 33px);
+    width: calc(50% - 25px);
   }
   .siteHeader__logo {
-    width: 76px;
+    width: 50px;
+  }
+}
+
+.menuFloat {
+  width: 100%;
+  background-color: #2F416B;
+  position: fixed;
+  top: -60px;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 0 10px #0000007d;
+  transition: ease .5s;
+}
+
+.menuFloat--scrolled {
+  top: 0;
+}
+
+.menuFloat__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.menuFloat__left, .menuFloat__right {
+  width: calc(100% / 2 - 75px);
+}
+
+.menuFloat__left ul, .menuFloat__right ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuFloat__left ul li, .menuFloat__right ul li {
+  position: relative;
+}
+
+.menuFloat__left ul li:after, .menuFloat__right ul li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  z-index: 1;
+}
+
+.menuFloat__left ul li.active:after, .menuFloat__left ul li:hover:after, .menuFloat__right ul li.active:after, .menuFloat__right ul li:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.menuFloat__left ul li a, .menuFloat__right ul li a {
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #00000057;
+  color: #fff;
+  text-decoration: none;
+  transition: ease .3s;
+}
+
+.menuFloat__left ul li a:hover, .menuFloat__right ul li a:hover {
+  opacity: .7;
+}
+
+.menuFloat__left .btnMobile, .menuFloat__right .btnMobile {
+  display: none;
+  position: relative;
+  width: 32px;
+  height: 17px;
+  transition: ease .3s;
+}
+
+.menuFloat__left .btnMobile:after, .menuFloat__right .btnMobile:after {
+  content: '';
+  background-image: url("/wp-content/themes/northport/images/menuMobileBtn.svg");
+  background-repeat: no-repeat;
+  background-size: 32px;
+  height: 17px;
+  position: relative;
+  display: block;
+}
+
+.menuFloat__left .btnMobile:hover, .menuFloat__right .btnMobile:hover {
+  opacity: .7;
+}
+
+.menuFloat__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+
+@media (max-width: 991px) {
+  .menuFloat__wrap {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  .menuFloat__left ul, .menuFloat__right ul {
+    display: none;
+  }
+  .menuFloat__left .btnMobile, .menuFloat__right .btnMobile {
+    display: block;
+    margin-left: auto;
   }
 }
 

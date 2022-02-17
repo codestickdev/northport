@@ -19,7 +19,7 @@ get_header(); ?>
             </a>
         </div>
     </section>
-    <section id="about" class="mainCounter">
+    <section id="about" class="mainCounter section-anchor">
         <div class="mainCounter__wrap container">
             <?php while(have_rows('mainCounter')): the_row();
                 $number = get_sub_field('mainCounter_number');
@@ -64,7 +64,7 @@ get_header(); ?>
             <h2>Apartamenty</h2>
         </div>
     </section>
-    <section id="apartments" class="mainApartaments">
+    <section id="apartments" class="mainApartaments section-anchor">
         <div class="mainApartaments__wrap">
             <div class="mainApartaments__photo">
                 <img src="<?php echo get_template_directory_uri() . '/images/frontpage/apartaments.png'; ?>" />
@@ -252,7 +252,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="gallery" class="mainGallery">
+    <section id="gallery" class="mainGallery section-anchor">
         <div class="mainGallery__wrap">
             <div class="mainGallery__heading">
                 <h2>Galeria</h2>
@@ -274,7 +274,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="localization" class="mainVideo">
+    <section id="localization" class="mainVideo section-anchor">
         <div class="mainVideo__heading">
             <h2>Malownicza lokalizacja</h2>
         </div>
@@ -366,7 +366,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="contact" class="mainForm">
+    <section id="contact" class="mainForm section-anchor">
         <div class="mainForm__wrap">
             <h2>Zapraszamy do kontaktu</h2>
             <form class="contactForm" name="contactForm">

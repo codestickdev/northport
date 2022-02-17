@@ -295,6 +295,7 @@
      */
     $(document).ready(function(){
         $('.btnMobile').on('click', function(){
+            $('.menuFloat').removeClass('menuFloat--scrolled');
             $('.menuMobile').addClass('menuMobile--ready');
 
             setTimeout(function(){
@@ -302,8 +303,11 @@
             }, 500);
         });
         $('.menuMobile__close').on('click', function(){
-            $('.menuMobile').removeClass('menuMobile--active');
+            if($(document).scrollTop() > 200){
+                $('.menuFloat').addClass('menuFloat--scrolled');
+            }
 
+            $('.menuMobile').removeClass('menuMobile--active');
             setTimeout(function(){
                 $('.menuMobile').removeClass('menuMobile--ready');
             }, 300);
@@ -317,6 +321,66 @@
             setTimeout(function(){
                 $('.menuMobile').removeClass('menuMobile--ready');
             }, 600);
+        });
+    });
+
+    /**
+     * Float menu
+     */
+    $(document).ready(function(){
+        setTimeout(function(){
+            var menuFloat = $('.menuFloat');
+            var didScroll;
+            var lastScrollTop = 0;
+            var delta = 50;
+            var navbarHeight = menuFloat.outerHeight();
+    
+            $(window).scroll(function(event){
+                if($(document).scrollTop() > 200){
+                    didScroll = true;
+                }
+            });
+    
+            setInterval(function() {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 250);
+    
+            function hasScrolled() {
+                var menuFloat = $('.menuFloat');
+                var st = $(this).scrollTop();
+                
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+                
+                if (st > lastScrollTop && st > navbarHeight){
+                    menuFloat.addClass('menuFloat--scrolled');
+                } else {
+                    if(st + $(window).height() < $(document).height()) {
+                        menuFloat.removeClass('menuFloat--scrolled');
+                    }
+                }
+                lastScrollTop = st;
+            }
+        }, 150);
+
+        // Active menu items on scroll
+        $('.section-anchor').each(function(){
+            var section = $(this),
+                id = section.attr('id'),
+                distance = section.offset().top - 100,
+                $window = $(window);
+
+            $window.scroll(function() {
+                if ( $window.scrollTop() >= distance ) {
+                    $('.menuFloat').find('li').removeClass('active');
+                    $('.menuFloat').find('a[href="#' + id + '"]').parents('li').addClass('active');
+                }else{
+                    $('.menuFloat').find('a[href="#' + id + '"]').parents('li').removeClass('active');
+                }
+            });
         });
     });
 

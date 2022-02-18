@@ -10,14 +10,14 @@ get_header(); ?>
             <h1><?php the_field('mainHeader_title'); ?></h1>
             <p><?php the_field('mainHeader_subtitle'); ?></p>
         </div>
-        <div class="mainHeader__social">
+        <!-- <div class="mainHeader__social">
             <a href="#" target="_blank">
                 <img src="<?php echo get_template_directory_uri() . '/images/social/social_ig.svg'; ?>"/>
             </a>
             <a href="#" target="_blank">
                 <img src="<?php echo get_template_directory_uri() . '/images/social/social_fb.svg'; ?>"/>
             </a>
-        </div>
+        </div> -->
     </section>
     <section id="about" class="mainCounter section-anchor">
         <div class="mainCounter__wrap container">

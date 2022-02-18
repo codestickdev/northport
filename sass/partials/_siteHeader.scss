@@ -77,7 +77,7 @@
                         height: 1px;
                         bottom: 10px;
                         left: 0;
-                        background-color: #2F416B;
+                        background-color: $brown_light;
                         transform-origin: bottom right;
                         transition: transform 0.25s ease-out;
                         z-index: 1;
@@ -88,7 +88,7 @@
                         width: 16px;
                         height: 16px;
                         border-radius: 100%;
-                        border: 1px solid #BCA58A;
+                        border: 1px solid $brown;
                         position: absolute;
                         bottom: 2px;
                         left: 0;
@@ -226,7 +226,7 @@
                     height: 1px;
                     bottom: 0;
                     left: 0;
-                    background-color: #fff;
+                    background-color: #bba589;
                     transform-origin: bottom right;
                     transition: transform 0.25s ease-out;
                     z-index: 1;

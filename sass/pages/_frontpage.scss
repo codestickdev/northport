@@ -111,7 +111,7 @@
             font-size: 100px;
             line-height: 1;
             font-family: 'Prata', sans-serif;
-            color: $brown_light;
+            color: $brown;
             opacity: 1;
             transition-delay: .5s;
             transition: ease .5s;
@@ -938,6 +938,7 @@
         img{
             display: block;
             margin: 0 auto;
+            filter: invert(14%) sepia(53%) saturate(1349%) hue-rotate(-36deg) brightness(93%) contrast(91%);
         }
     }
     &__gallery{

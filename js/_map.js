@@ -130,12 +130,10 @@
                 content: contentString,
             });
 
-            var activeWindow = false;
-
             google.maps.event.addListener(marker, 'click', function() {
                 map.setCenter(marker.getPosition());
 
-                infowindow.close(map);
+                infowindow.close();
                 infowindow.open({
                     anchor: marker,
                     map,
@@ -143,14 +141,6 @@
                 });
                 map.setZoom(14);
             });
-
-            function closeModal(status){
-                console.log(status);
-                // if(activeWindow !== false){
-                //     console.log(activeWindow);
-                //     activeWindow.close();
-                // }
-            }
 
             // Append to reference for later use.
             map.markers.push(marker);

@@ -22,6 +22,15 @@
                 var zoom = 12;
             }
 
+            var myStyles =[
+                {
+                    featureType: "poi",
+                    stylers: [{
+                        visibility: "off"
+                    }]   
+                }
+            ];
+
             // Create gerenic map.
             var mapArgs = {
                 zoom        : zoom,
@@ -29,7 +38,9 @@
                 disableDefaultUI: true,
                 scaleControl: false,
                 streetViewControl: false,
-                fullscreenControl: false
+                fullscreenControl: false,
+                styles: myStyles,
+
             };
             var map = new google.maps.Map( $el[0], mapArgs );
 

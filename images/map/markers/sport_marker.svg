@@ -1,0 +1,12 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 57" width="45" height="57">
+	<title>sport_marker-svg</title>
+	<style>
+		.s0 { fill: #bca58a } 
+		.s1 { fill: #ffffff } 
+	</style>
+	<path id="Layer" class="s0" d="m38.4 6.6c4.2 4.2 6.6 9.9 6.6 15.8c0 4.8-1.6 9.6-4.5 13.4c0 0-0.6 0.8-0.7 0.9l-17.3 20.3l-17.3-20.3c-0.1-0.1-0.7-0.9-0.7-0.9c-2.9-3.8-4.5-8.6-4.5-13.4c0-5.9 2.4-11.6 6.6-15.8c4.2-4.2 9.9-6.6 15.9-6.6c6 0 11.7 2.4 15.9 6.6z" />
+	<path id="Layer" class="s1" d="m34.6 21l-5-7l2.4-1.7l4.9 7.1z" />
+	<path id="Layer" class="s1" d="m31.9 24.7l-2.5-3.6l-11.9 8.3l2.5 3.5l-2.4 1.6l-6.6-9.4l2.4-1.6l2.5 3.5l11.8-8.2l-2.5-3.5l2.4-1.7l6.6 9.4l-2.3 1.7z" />
+	<path id="Layer" class="s1" d="m13.3 35.8l-5-7l2.4-1.7l4.9 7.1z" />
+	<path id="Layer" class="s1" d="m11.1 33.9l-2.3 1.7l-1.7-2.4l2.4-1.6z" />
+</svg>

@@ -1968,6 +1968,42 @@ body {
   width: 100%;
 }
 
+.mainMap__map #mainMap .gm-style-iw-t:after {
+  box-shadow: none;
+  border-bottom: 1px solid #bba589;
+  border-left: 1px solid #bba589;
+  background: #fff;
+}
+
+.mainMap__map #mainMap .gm-style-iw-t .gm-style-iw {
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  border: 1px solid #bba589;
+}
+
+.mainMap__map #mainMap .gm-style-iw-t .gm-style-iw .gm-style-iw-d {
+  padding: 0;
+  overflow: auto !important;
+}
+
+.mainMap__map #mainMap .gm-style-iw-t .gm-style-iw button {
+  display: none !important;
+}
+
+.mainMap__map #mainMap .mapPopup {
+  padding: 10px;
+}
+
+.mainMap__map #mainMap .mapPopup__heading {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  font-family: 'Portrait';
+  margin: 0;
+  text-align: center;
+}
+
 .mainMap__info {
   display: flex;
   align-items: center;

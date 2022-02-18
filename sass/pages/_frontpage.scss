@@ -1336,6 +1336,41 @@
         #mainMap{
             height: 570px;
             width: 100%;
+
+            .gm-style-iw-t{
+                &:after{
+                    box-shadow: none;
+                    border-bottom: 1px solid #bba589;
+                    border-left: 1px solid #bba589;
+                    background: #fff;
+                }
+                .gm-style-iw{
+                    padding: 0;
+                    box-shadow: none;
+                    border-radius: 0;
+                    border: 1px solid #bba589;
+    
+                    .gm-style-iw-d{
+                        padding: 0;
+                        overflow: auto !important;
+                    }
+                    button{
+                        display: none !important;
+                    }
+                }
+            }
+            .mapPopup{
+                padding: 10px;
+
+                &__heading{
+                    font-size: 16px;
+                    line-height: 1;
+                    font-weight: 500;
+                    font-family: 'Portrait';
+                    margin: 0;
+                    text-align: center;
+                }
+            }
         }
     }
     &__info{

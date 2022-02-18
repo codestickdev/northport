@@ -309,9 +309,15 @@ get_header(); ?>
 
     <section class="mainMap">
         <div class="mainMap__map container">
-            <?php $map = get_field('mainMap'); ?>
             <div id="mainMap">
-                <div class="marker" data-lat="<?php echo $map['lat']; ?>" data-lng="<?php echo $map['lng']; ?>"></div>
+                <?php while(have_rows('mainMap')): the_row();
+                    $name = get_sub_field('mainMap_name');
+                    $cat = get_sub_field('mainMap_cat');
+                    $marker = get_sub_field('mainMap_marker');
+                ?>
+                    <div class="marker" data-name="<?php echo $name; ?>" data-category="<?php echo $cat; ?>" data-lat="<?php echo $marker['lat']; ?>" data-lng="<?php echo $marker['lng']; ?>"></div>
+                <?php endwhile; ?>
+                <div class="marker marker--northport" data-name="Northport" data-category="northport" data-lat="54.1843561" data-lng="21.7516381"></div>
             </div>
         </div>
         <div class="mainMap__info">

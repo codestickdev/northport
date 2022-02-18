@@ -1,4 +1,3 @@
-
 (function( $ ) {
     $(document).ready(function(){
         /**
@@ -25,7 +24,7 @@
 
             // Create gerenic map.
             var mapArgs = {
-                zoom        : $el.data('zoom') || zoom,
+                zoom        : zoom,
                 mapTypeId   : google.maps.MapTypeId.TERRAIN,
                 disableDefaultUI: true,
                 scaleControl: false,
@@ -37,7 +36,7 @@
             // Add markers.
             map.markers = [];
             $markers.each(function(){
-                initMarker( $(this), map );
+                initMarker($(this), map);
             });
 
             // Center map based on markers.
@@ -46,6 +45,26 @@
             // Return map instance.
             return map;
         }
+
+        /**
+         * mapModal
+         * 
+         * Close popups when user click another marker
+         * 
+         * @param {*} $marker 
+         * @param {*} map 
+         */
+        // function mapModal(marker, map){
+        //     var activeInfoWindow = false;
+        //     google.maps.event.addListener(marker, 'click', function(){
+        //         console.log(activeInfoWindow);
+        //         console.log(infowindow);
+        //         if (activeInfoWindow) { activeInfoWindow.close();}
+        //         infowindow.open(map, marker);
+        //         activeInfoWindow = infowindow;
+        //         console.log(activeInfoWindow);
+        //     });
+        // }
 
         /**
          * initMarker
@@ -64,33 +83,82 @@
             // Get position from marker.
             var lat = $marker.data('lat');
             var lng = $marker.data('lng');
+            var name = $marker.data('name');
+            var cat = $marker.data('category');
+            var icon = '';
             var latLng = {
                 lat: parseFloat( lat ),
                 lng: parseFloat( lng )
             };
 
+            // Create marker
+            const iconBase = "/wp-content/themes/northport/images/map/markers/";
+
+            if(cat == 'edukacja'){
+                icon = iconBase + "edukacja_marker.svg";
+            }else if(cat == 'natura'){
+                icon = iconBase + "natura_marker.svg";
+            }else if(cat == 'rozrywka'){
+                icon = iconBase + "rozrywka_marker.svg";
+            }else if(cat == 'sport'){
+                icon = iconBase + "sport_marker.svg";
+            }else if(cat == 'sklepy'){
+                icon = iconBase + "sklepy_marker.svg";
+            }else if(cat == 'restauracje'){
+                icon = iconBase + "restauracje_marker.svg";
+            }else if(cat == 'zdrowie'){
+                icon = iconBase + "zdrowie_marker.svg";
+            }else if(cat == 'kultura'){
+                icon = iconBase + "kultura_marker.svg";
+            }else if(cat == 'northport'){
+                icon = iconBase + "lokalizator_marker.svg";
+            }
+
             // Create marker instance.
             var marker = new google.maps.Marker({
-                position : latLng,
-                map: map
+                position: latLng,
+                map: map,
+                icon: icon,
             });
 
-            // Append to reference for later use.
-            map.markers.push( marker );
+            // Marker info
+            var contentString =
+            '<div class="mapPopup">' +
+            '<h3 class="mapPopup__heading">' + name + '</h3>' +
+            '</div>';
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+            });
 
-            // If marker contains HTML, add it to an infoWindow.
-            if( $marker.html() ){
+            var activeWindow = false;
 
-                // Create info window.
-                var infowindow = new google.maps.InfoWindow({
-                    content: $marker.html()
+            google.maps.event.addListener(marker, 'click', function() {
+                map.setCenter(marker.getPosition());
+
+                infowindow.close(map);
+                infowindow.open({
+                    anchor: marker,
+                    map,
+                    shouldFocus: false,
                 });
+                map.setZoom(14);
+            });
 
-                // Show info window when marker is clicked.
-                google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.open( map, marker );
-                });
+            function closeModal(status){
+                console.log(status);
+                // if(activeWindow !== false){
+                //     console.log(activeWindow);
+                //     activeWindow.close();
+                // }
             }
+
+            // Append to reference for later use.
+            map.markers.push(marker);
+
+            google.maps.event.addListener(map, 'click', function(){
+                console.log('close');
+                infowindow.close();
+            });
         }
 
         /**
@@ -105,32 +173,18 @@
          * @return  void
          */
         function centerMap( map ) {
+            var mapLat = 54.1975671,
+                mapLng = 21.7274664;
 
-            if($(window).width() > 575){
-                var lat = 54.1975671;
-                var lng = 21.7274664;
-            }else{
-                var lat = 54.1895964;
-                var lng = 21.7343568;
+            if($(window).width() <= 575){
+                mapLat = 54.1895964;
+                mapLng = 21.7343568;
             }
 
-            // Create map boundaries from all map markers.
-            var bounds = new google.maps.LatLngBounds();
-            map.markers.forEach(function( marker ){
-                bounds.extend({
-                    lat: lat,
-                    lng: lng,
-                });
+            map.setCenter({
+                lat: mapLat,
+                lng: mapLng,
             });
-
-            // Case: Single marker.
-            if( map.markers.length == 1 ){
-                map.setCenter( bounds.getCenter() );
-
-            // Case: Multiple markers.
-            } else{
-                map.fitBounds( bounds );
-            }
         }
 
         // Render maps on page load.

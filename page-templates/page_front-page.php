@@ -389,12 +389,16 @@ get_header(); ?>
                 <div class="contactForm__checkbox">
                     <div class="input"></div>
                     <input type="checkbox" name="contactAcceptance_1" required/>
-                    <label for="contactAcceptance_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</label>
+                    <label for="contactAcceptance_1">Wyrażam zgodę na otrzymywanie informacji marketingowych, w tym ofert, drogą elektroniczną (email, SMS) od spółki Monte Carlo Residence</label>
                 </div>
                 <div class="contactForm__checkbox">
                     <div class="input"></div>
                     <input type="checkbox" name="contactAcceptance_2" required/>
-                    <label for="contactAcceptance_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</label>
+                    <label for="contactAcceptance_2">Wyrażam zgodę na otrzymywanie informacji marketingowych w tym ofert przez telefoniczne połączenia głosowe od spółki Monte Carlo Residence</label>
+                </div>
+                <div class="contactForm__info">
+                    <p>W dowolnym momencie mogę cofnąć moją zgodę. Wycofanie zgody nie wpływa na zgodność z prawem czynności, których dokonano na podstawie zgody przed jej wycofaniem.</p>
+                    <p><a href="#" target="_blank">Informacje dotyczące przetwarzania danych osobowych</a></p>
                 </div>
                 <div class="contactForm__submit">
                     <button type="submit" class="btn"><span>Wyślij</span></button>

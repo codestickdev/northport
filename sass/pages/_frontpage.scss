@@ -1555,7 +1555,7 @@
             &__checkbox{
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: flex-start;
                 margin: 0 0 20px;
                 position: relative;
 
@@ -1618,6 +1618,24 @@
                     line-height: 15px;
                     color: #000000b3;
                     margin: 0;
+                }
+            }
+            &__info{
+                p{
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #000000b3;
+                    
+                    a{
+                        color: $brown_light !important;
+                        cursor: pointer;
+                        text-decoration: none;
+                        transition: ease .3s;
+
+                        &:hover{
+                            opacity: .7;
+                        }
+                    }
                 }
             }
             &__submit{

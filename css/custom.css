@@ -176,7 +176,7 @@ body {
   position: relative;
   outline: none;
   padding-bottom: 20px;
-  text-shadow: 1px 1px 1px #00000057;
+  text-shadow: 1px 1px 1px #0000002b;
 }
 
 .siteHeader__left ul li a:after, .siteHeader__right ul li a:after {
@@ -344,12 +344,13 @@ body {
 }
 
 .menuFloat__left ul li a, .menuFloat__right ul li a {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px #00000057;
   color: #fff;
   text-decoration: none;
+  letter-spacing: 2px;
   transition: ease .3s;
 }
 
@@ -2170,7 +2171,7 @@ body {
 .mainForm__wrap .contactForm__checkbox {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 0 20px;
   position: relative;
 }
@@ -2232,6 +2233,23 @@ body {
   line-height: 15px;
   color: #000000b3;
   margin: 0;
+}
+
+.mainForm__wrap .contactForm__info p {
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000b3;
+}
+
+.mainForm__wrap .contactForm__info p a {
+  color: #BCA58A !important;
+  cursor: pointer;
+  text-decoration: none;
+  transition: ease .3s;
+}
+
+.mainForm__wrap .contactForm__info p a:hover {
+  opacity: .7;
 }
 
 .mainForm__wrap .contactForm__submit {

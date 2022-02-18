@@ -22,7 +22,7 @@
 				<div class="wrap">
 					<h2>Biuro sprzedaży</h2>
 					<p>Zapraszamy do umówienia się na<br/>wizytę w naszym biurze sprzedaży</p>
-					<p class="address">ul. Minska 25C/U5<br>03-808 Warszawa</p>
+					<p class="address">ul. Mińska 25C/U5<br>03-808 Warszawa</p>
 					<a href="tel:+48508913789">+48 508 913 789</a>
 					<div class="social">
 						<a href="#" target="_blank">

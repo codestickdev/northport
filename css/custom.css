@@ -285,7 +285,7 @@ body {
 
 .menuFloat {
   width: 100%;
-  background-color: #2F416B;
+  background-color: #212f3a;
   position: fixed;
   top: -60px;
   left: 0;
@@ -500,7 +500,7 @@ body {
 }
 
 .menuMobile__wrap ul li a:hover {
-  color: #2F416B;
+  color: #212f3a;
 }
 
 .menuMobile__wrap ul li a:hover:before {
@@ -526,7 +526,7 @@ body {
   height: 318px;
   display: flex;
   width: 100%;
-  background-color: #2F416B;
+  background-color: #212f3a;
   position: relative;
 }
 
@@ -571,7 +571,7 @@ body {
 
 .siteFooter__info {
   height: inherit;
-  background-color: #2F416B;
+  background-color: #212f3a;
   display: flex;
   align-items: center;
   max-width: fit-content;
@@ -834,7 +834,7 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 0;
   font-size: 16px;
-  color: #2F416B;
+  color: #212f3a;
   letter-spacing: 12px;
   text-transform: uppercase;
   position: absolute;
@@ -974,7 +974,7 @@ body {
 }
 
 .mainAbout__divider {
-  background-color: #2F416B;
+  background-color: #212f3a;
   height: 110px;
   display: flex;
   align-items: center;
@@ -1140,7 +1140,7 @@ body {
 
 .mainApartaments__heading {
   max-width: 742px;
-  background-color: #2F416B;
+  background-color: #212f3a;
   text-align: center;
   min-height: 116px;
   display: flex;
@@ -1176,7 +1176,7 @@ body {
 }
 
 .mainApartaments__info .apInfo__type .heading {
-  border-bottom: 2px solid #2F416B;
+  border-bottom: 2px solid #212f3a;
   transition: ease .3s;
 }
 
@@ -1216,7 +1216,7 @@ body {
 
 .mainApartaments__info .apInfo__info {
   display: none;
-  border: 1px solid #2F416B;
+  border: 1px solid #212f3a;
   max-width: calc(100% - 10px);
   margin: 0 auto;
   padding: 32px 30px 18px;
@@ -1353,7 +1353,7 @@ body {
   width: 17px;
   height: 17px;
   border-radius: 100%;
-  border: 1px solid #2F416B;
+  border: 1px solid #212f3a;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -1722,7 +1722,7 @@ body {
 .mainVideo__heading {
   width: 100%;
   min-height: 225px;
-  background-color: #2F416B;
+  background-color: #212f3a;
   padding: 26px 0 0;
 }
 
@@ -1881,7 +1881,7 @@ body {
   width: 17px;
   height: 17px;
   border-radius: 100%;
-  border: 1px solid #2F416B;
+  border: 1px solid #212f3a;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -2277,7 +2277,7 @@ body {
   width: 23px;
   height: 23px;
   border-radius: 100%;
-  border: 1px solid #2F416B;
+  border: 1px solid #212f3a;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);

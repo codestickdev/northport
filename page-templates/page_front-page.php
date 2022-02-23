@@ -5,7 +5,14 @@
 get_header(); ?>
 
 <main class="northport northport--main">
-    <section id="top" class="mainHeader" style="background-image: url('<?php echo get_field('mainHeader_bg'); ?>');">
+
+    <?php if(get_field('mainHeader_slider')): ?>
+    <section id="top" class="mainHeader">
+        <div class="mainHeader__slider">
+            <?php while(have_rows('mainHeader_slider')): the_row(); ?>
+                <div class="slide" style="background-image: url('<?php echo get_sub_field('mainHeader_slider_image'); ?>')"></div>
+            <?php endwhile; ?>
+        </div>
         <div class="mainHeader__wrap">
             <h1><?php the_field('mainHeader_title'); ?></h1>
             <p><?php the_field('mainHeader_subtitle'); ?></p>
@@ -19,6 +26,8 @@ get_header(); ?>
             </a>
         </div> -->
     </section>
+    <?php endif; ?>
+
     <section id="about" class="mainCounter section-anchor">
         <div class="mainCounter__wrap container">
             <?php while(have_rows('mainCounter')): the_row();
@@ -57,6 +66,12 @@ get_header(); ?>
                 <div class="image">
                     <img src="<?php the_field('mainAbout_second_img'); ?>"/>
                 </div>
+            </div>
+        </div>
+        <div class="mainAbout__full">
+            <div class="wrap">
+                <h2>North Port Estate</h2>
+                <p>Apartamenty stworzone<br/>w harmonii z naturą.</p>
             </div>
         </div>
         <div class="mainAbout__divider">

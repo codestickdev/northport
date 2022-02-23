@@ -62,10 +62,54 @@
     
     var Utils = new Utils();
 
+
+    /**
+     * Header slider
+     */
+    $(window).on('load', function(){
+        setTimeout(function(){
+            $('.loader').removeClass('loader--active');
+            $('.mainCounter').trigger('count');
+        }, 1000);
+        setTimeout(function(){
+            $('.loader').remove();
+        }, 2500);
+    });
+    $(document).ready(function(){
+        $('.mainHeader__slider').on('init', function(event, slick, currentSlide, nextSlide){
+            $('.slide.slick-active').removeClass('slick-active');
+            $('.slide').eq(0).addClass('reset');
+        
+            setTimeout(function(){
+                $('.slide').eq(0).removeClass('reset');
+                $('.slide').eq(0).addClass('slick-active');
+            }, 100);
+        });
+
+        $('.mainHeader__slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+            $('.slide').not('.slick-active').addClass('reset');
+            setTimeout(function(){
+                $('.slide').not('.slick-active').removeClass('reset');
+            }, 50);
+        });
+
+        setTimeout(function(){
+            $('.mainHeader__slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                draggable: false,
+                dots: false,
+                autoplay: true,
+                fade: true,
+                speed: 1000,
+            });
+        }, 1000);
+    });
+
     /**
      * Number counter
      */
-
     function count(){
         $('.mainCounter__number').each(function(){
             var isElementInView = Utils.isElementInView($($(this)), false);
@@ -89,8 +133,15 @@
         $(window).scrollTop(
             $(window).scrollTop() + 1
         );
+        $('.mainCounter').on('count', function(){
+            $(window).scrollTop(
+                $(window).scrollTop() + 1
+            );
+        });
         $(window).on('scroll', function(){
-            count();
+            if(!$('.loader').hasClass('loader--active')){
+                count();
+            }
         });
     });
 

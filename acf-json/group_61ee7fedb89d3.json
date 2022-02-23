@@ -20,9 +20,9 @@
         },
         {
             "key": "field_61ee7ffa76db6",
-            "label": "Zdjęcie w tle",
-            "name": "mainHeader_bg",
-            "type": "image",
+            "label": "Slider zdjęć",
+            "name": "mainHeader_slider",
+            "type": "repeater",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -31,16 +31,37 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "collapsed": "",
+            "min": 3,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Dodaj slajd",
+            "sub_fields": [
+                {
+                    "key": "field_62166c3820db5",
+                    "label": "Zdjęcie",
+                    "name": "mainHeader_slider_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
         },
         {
             "key": "field_61ee878f6a55c",
@@ -699,5 +720,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1645188443
+    "modified": 1645636677
 }

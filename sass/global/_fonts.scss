@@ -25,6 +25,17 @@
 }
 
 @font-face {
+    font-family: "Cinzel";
+    font-weight: 400;
+    src: url('/wp-content/themes/northport/fonts/cinzel/Cinzel-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Cinzel";
+    font-weight: 500;
+    src: url('/wp-content/themes/northport/fonts/cinzel/Cinzel-Medium.ttf') format('truetype');
+}
+
+@font-face {
     font-family: "Prata";
     font-weight: 400;
     src: url('/wp-content/themes/northport/fonts/prata/Prata-Regular.ttf') format('truetype');
@@ -38,5 +49,6 @@
 
 html,
 body{
-    font-family: "Pontano Sans", sans-serif !important;
+    font-family: 'Cinzel', sans-serif !important;
+    font-weight: 400;
 }

@@ -36,6 +36,9 @@
 			</div>
 		</div>
 	</footer>
+	<div class="loader loader--active">
+		<img src="<?php echo get_template_directory_uri() . '/images/logo_footer.png'; ?>"/>
+	</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

@@ -387,6 +387,27 @@ get_header(); ?>
         </div>
     </section>
 
+    <section class="mainInfo mainInfo--about" id="developer">
+        <div class="mainInfo__wrap container">
+            <div class="mainInfo__content mainInfo__content--full">
+                <div class="content">
+                    <h3>O deweloperze</h3>
+                    <p><?php echo get_field('aboutDev_main'); ?></p>
+                </div>
+            </div>
+            <div class="mainInfo__content mainInfo__content--reverse">
+                <div class="image">
+                    <img src="<?php echo get_field('aboutDev_image'); ?>"/>
+                </div>
+                <div class="content">
+                    <h2>Nasz realizacje</h2>
+                    <h3><?php echo get_field('aboutDev_title'); ?></h3>
+                    <?php echo get_field('aboutDev_content'); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="mainForm section-anchor">
         <div class="mainForm__wrap">
             <h2>Zapraszamy do kontaktu</h2>

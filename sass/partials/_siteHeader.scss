@@ -12,23 +12,24 @@
         display: flex;
         align-content: center;
         justify-content: center;
-        max-width: 1000px;
+        max-width: 1100px;
         min-height: inherit;
         margin: 0 auto;
     }
 
     &__logo{
-        width: 200px;
+        width: 280px;
         min-height: inherit;
         position: relative;
 
         a{
             display: block;
             position: absolute;
-            bottom: 0;
+            bottom: -57px;
             left: 0;
             right: 0;
             margin: 0 auto;
+            max-width: 200px;
             text-align: center;
             outline: none;
             transition: ease .3s;
@@ -42,7 +43,7 @@
     &__right{
         display: flex;
         align-items: center;
-        width: calc(50% - 100px);
+        width: calc(50% - 140px);
         min-height: inherit;
 
         &>div{
@@ -140,22 +141,27 @@
 @media (max-width: 991px){
     .siteHeader{
         background-color: unset;
+        top: 50px;
 
         &__wrap{
             padding: 0 20px;
         }
         &__left{
-            width: calc(50% - 50px);
+            width: calc(50% - 75px);
 
             .menu-menu-left-container{
                 display: none;
             }
         }
         &__logo{
-            width: 100px;
+            width: 150px;
+            
+            a{
+                bottom: -40px;
+            }
         }
         &__right{
-            width: calc(50% - 50px);
+            width: calc(50% - 75px);
             align-items: flex-start;
             justify-content: flex-end;
 
@@ -175,9 +181,10 @@
         &__left,
         &__right{
             width: calc(50% - 25px);
+            align-items: center;
         }
         &__logo{
-            width: 50px;
+            width: 120px;
         }
     }
 }

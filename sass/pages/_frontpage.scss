@@ -1288,6 +1288,35 @@
 .mainInfo{
     position: relative;
 
+    &--about{
+        padding: 50px 0 0;
+
+        .mainInfo__content{
+            &.mainInfo__content--reverse{
+                
+                .content{
+                    display: block !important;
+
+                    h2{
+                        font-size: 20px;
+                        line-height: 26px;
+                        color: $blue;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: left;
+                        margin: 0 0 20px;
+                    }
+                    h3{
+                        font-size: 16px;
+                        line-height: 21px;
+                        text-transform: none;
+                        margin: 0 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
     &:before{
         content: '';
         background-image: url('/wp-content/themes/northport/images/info_bg_vec.svg');
@@ -1410,6 +1439,14 @@
                 text-transform: uppercase;
                 padding-top: 1px;
                 transition: ease .3s;
+            }
+        }
+
+        &--full{
+            padding-bottom: 30px;
+
+            .content{
+                width: 100%;
             }
         }
 

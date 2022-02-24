@@ -33,7 +33,7 @@
 			</div>
 			<div class="siteHeader__logo">
 				<a href="#top">
-					<img src="<?php echo get_template_directory_uri() . '/images/logo_white.svg'; ?>"/>
+					<img src="<?php echo get_template_directory_uri() . '/images/logo_new.svg'; ?>"/>
 				</a>
 			</div>
 			<div class="siteHeader__right">

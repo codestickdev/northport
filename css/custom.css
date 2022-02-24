@@ -145,13 +145,13 @@ body {
   display: flex;
   align-content: center;
   justify-content: center;
-  max-width: 1000px;
+  max-width: 1100px;
   min-height: inherit;
   margin: 0 auto;
 }
 
 .siteHeader__logo {
-  width: 200px;
+  width: 280px;
   min-height: inherit;
   position: relative;
 }
@@ -159,10 +159,11 @@ body {
 .siteHeader__logo a {
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -57px;
   left: 0;
   right: 0;
   margin: 0 auto;
+  max-width: 200px;
   text-align: center;
   outline: none;
   transition: ease .3s;
@@ -175,7 +176,7 @@ body {
 .siteHeader__left, .siteHeader__right {
   display: flex;
   align-items: center;
-  width: calc(50% - 100px);
+  width: calc(50% - 140px);
   min-height: inherit;
 }
 
@@ -270,21 +271,25 @@ body {
 @media (max-width: 991px) {
   .siteHeader {
     background-color: unset;
+    top: 50px;
   }
   .siteHeader__wrap {
     padding: 0 20px;
   }
   .siteHeader__left {
-    width: calc(50% - 50px);
+    width: calc(50% - 75px);
   }
   .siteHeader__left .menu-menu-left-container {
     display: none;
   }
   .siteHeader__logo {
-    width: 100px;
+    width: 150px;
+  }
+  .siteHeader__logo a {
+    bottom: -40px;
   }
   .siteHeader__right {
-    width: calc(50% - 50px);
+    width: calc(50% - 75px);
     align-items: flex-start;
     justify-content: flex-end;
   }
@@ -302,9 +307,10 @@ body {
   }
   .siteHeader__left, .siteHeader__right {
     width: calc(50% - 25px);
+    align-items: center;
   }
   .siteHeader__logo {
-    width: 50px;
+    width: 120px;
   }
 }
 
@@ -1946,6 +1952,31 @@ body {
   position: relative;
 }
 
+.mainInfo--about {
+  padding: 50px 0 0;
+}
+
+.mainInfo--about .mainInfo__content.mainInfo__content--reverse .content {
+  display: block !important;
+}
+
+.mainInfo--about .mainInfo__content.mainInfo__content--reverse .content h2 {
+  font-size: 20px;
+  line-height: 26px;
+  color: #273642;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0 0 20px;
+}
+
+.mainInfo--about .mainInfo__content.mainInfo__content--reverse .content h3 {
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: none;
+  margin: 0 0 10px;
+}
+
 .mainInfo:before {
   content: '';
   background-image: url("/wp-content/themes/northport/images/info_bg_vec.svg");
@@ -2074,6 +2105,14 @@ body {
   text-transform: uppercase;
   padding-top: 1px;
   transition: ease .3s;
+}
+
+.mainInfo__content--full {
+  padding-bottom: 30px;
+}
+
+.mainInfo__content--full .content {
+  width: 100%;
 }
 
 .mainInfo__content--reverse {

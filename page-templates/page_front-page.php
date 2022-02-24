@@ -76,7 +76,7 @@ get_header(); ?>
         </div>
         <div class="mainAbout__divider">
             <img src="<?php echo get_template_directory_uri() . '/images/frontpage/logo_white_vec.svg'; ?>"/>
-            <h2>Apartamenty</h2>
+            <h2>Wszukiwarka graficzna</h2>
         </div>
     </section>
     <section id="apartments" class="mainApartaments section-anchor">

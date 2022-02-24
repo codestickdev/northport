@@ -47,6 +47,17 @@
     src: url('/wp-content/themes/northport/fonts/pontano_sans/PontanoSans-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: "Playfair";
+    font-weight: 400;
+    src: url('/wp-content/themes/northport/fonts/playfair/PlayfairDisplay-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Playfair";
+    font-weight: 500;
+    src: url('/wp-content/themes/northport/fonts/playfair/PlayfairDisplay-Medium.ttf') format('truetype');
+}
+
 html,
 body{
     font-family: 'Cinzel', sans-serif !important;

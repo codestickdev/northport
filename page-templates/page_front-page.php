@@ -71,12 +71,12 @@ get_header(); ?>
         <div class="mainAbout__full">
             <div class="wrap">
                 <h2>North Port Estate</h2>
-                <p>Apartamenty stworzone<br/>w harmonii z naturą.</p>
+                <p>Apartamenty stworzone<br/>w harmonii z naturą</p>
             </div>
         </div>
         <div class="mainAbout__divider">
             <img src="<?php echo get_template_directory_uri() . '/images/frontpage/logo_white_vec.svg'; ?>"/>
-            <h2>Wszukiwarka graficzna</h2>
+            <h2>Wyszukiwarka graficzna</h2>
         </div>
     </section>
     <section id="apartments" class="mainApartaments section-anchor">

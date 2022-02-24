@@ -1001,8 +1001,8 @@ body {
 
 .mainAbout__content .content p {
   font-family: 'Playfair', sans-serif;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 15px;
+  line-height: 22px;
   margin: 0 0 25px;
   text-align: justify;
   color: #000;
@@ -1088,12 +1088,13 @@ body {
 }
 
 .mainAbout__divider img {
+  display: none;
   margin-top: 12px;
 }
 
 .mainAbout__divider h2 {
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 24px;
   font-weight: 400;
   color: #fff;
   text-align: center;
@@ -1705,12 +1706,12 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #000;
-  margin: 0 0 8px;
+  margin: 0;
   text-align: center;
 }
 
 .mainGallery__heading img {
-  display: block;
+  display: none;
   margin: 0 auto;
   filter: invert(14%) sepia(53%) saturate(1349%) hue-rotate(-36deg) brightness(93%) contrast(91%);
 }
@@ -1995,8 +1996,8 @@ body {
 
 .mainInfo__content .content p {
   font-family: 'Playfair', sans-serif;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 15px;
+  line-height: 22px;
   color: #000;
   margin: 0 0 20px;
   text-align: justify;

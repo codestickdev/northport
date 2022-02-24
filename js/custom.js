@@ -101,6 +101,7 @@
                 draggable: false,
                 dots: false,
                 autoplay: true,
+                infinite: true,
                 fade: true,
                 speed: 1000,
             });

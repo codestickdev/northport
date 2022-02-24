@@ -1267,6 +1267,7 @@ body {
 .mainApartaments__heading h2 {
   font-size: 20px;
   line-height: 26px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
@@ -1295,6 +1296,7 @@ body {
 .mainApartaments__info .apInfo__type .heading h3 {
   font-size: 20px;
   line-height: 26px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #e1c398;
   text-align: center;
@@ -1676,7 +1678,7 @@ body {
 .mainGallery__heading h2 {
   font-size: 20px;
   line-height: 26px;
-  font-weight: 400;
+  font-weight: 500;
   color: #e1c398;
   text-transform: uppercase;
   letter-spacing: .5px;
@@ -1687,7 +1689,7 @@ body {
 .mainGallery__heading p {
   font-size: 16px;
   line-height: 20px;
-  color: #e1c398;
+  color: #000;
   margin: 0 0 8px;
   text-align: center;
 }

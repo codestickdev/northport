@@ -1,7 +1,8 @@
 .siteHeader{
     display: block;
     width: 100%;
-    background: rgba(255, 255, 255, 0.35);
+    // background: rgba(255, 255, 255, 0.35);
+    background: $blue;
     position: absolute;
     z-index: 3;
     top: 90px;

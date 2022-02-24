@@ -17,9 +17,9 @@
             var $markers = $el.find('.marker');
 
             if($(window).width() > 575){
-                var zoom = 13;
+                var zoom = 13.3;
             }else{
-                var zoom = 12;
+                var zoom = 13;
             }
 
             var mapStyle = [
@@ -102,7 +102,8 @@
                 zoom        : zoom,
                 mapTypeId   : google.maps.MapTypeId.TERRAIN,
                 disableDefaultUI: true,
-                scaleControl: false,
+                zoomControl: true,
+                scaleControl: true,
                 streetViewControl: false,
                 fullscreenControl: false,
                 styles: mapStyle,
@@ -240,8 +241,8 @@
          * @return  void
          */
         function centerMap( map ) {
-            var mapLat = 54.1975671,
-                mapLng = 21.7274664;
+            var mapLat = 54.1843561,
+                mapLng = 21.7516381;
 
             if($(window).width() <= 575){
                 mapLat = 54.1895964;

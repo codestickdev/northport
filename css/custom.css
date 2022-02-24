@@ -134,7 +134,7 @@ body {
 .siteHeader {
   display: block;
   width: 100%;
-  background: rgba(255, 255, 255, 0.35);
+  background: #273642;
   position: absolute;
   z-index: 3;
   top: 90px;
@@ -2177,10 +2177,9 @@ body {
   justify-content: space-between;
   max-width: 765px;
   width: 100%;
-  border: 1px solid #e1c398;
-  background-color: #fff;
+  background-color: #273642;
   margin: -59px auto 0;
-  padding: 20px 20px 10px;
+  padding: 20px;
   position: relative;
   z-index: 2;
 }

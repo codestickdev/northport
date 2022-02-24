@@ -101,6 +101,8 @@
                 draggable: false,
                 dots: false,
                 autoplay: true,
+                pauseOnHover: false,
+                pauseOnFocus: false,
                 infinite: true,
                 fade: true,
                 speed: 1000,

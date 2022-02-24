@@ -113,6 +113,7 @@ a{
     box-shadow: 0 0 10px #0000007d;
 
     img{
+        max-width: 240px;
         animation: blink 1s 0s infinite;
         transform: scale(1);
         opacity: 1;

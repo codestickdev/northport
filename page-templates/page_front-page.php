@@ -74,12 +74,12 @@ get_header(); ?>
                 <p>Apartamenty stworzone<br/>w harmonii z naturą</p>
             </div>
         </div>
-        <div class="mainAbout__divider">
+        <div class="mainAbout__divider" id="apartments">
             <img src="<?php echo get_template_directory_uri() . '/images/frontpage/logo_white_vec.svg'; ?>"/>
             <h2>Wyszukiwarka graficzna</h2>
         </div>
     </section>
-    <section id="apartments" class="mainApartaments section-anchor">
+    <section class="mainApartaments section-anchor">
         <div class="mainApartaments__wrap">
             <div class="mainApartaments__photo">
                 <img src="<?php echo get_template_directory_uri() . '/images/frontpage/apartaments.png'; ?>" />

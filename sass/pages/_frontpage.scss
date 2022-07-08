@@ -491,7 +491,7 @@
                     height: 13.6%;
                     left: -46%;                
                     right: 0;
-                    top: 12%;
+                    top: 35%;
                     margin: 0 auto;
                     cursor: pointer;
                     position: absolute;
@@ -508,7 +508,7 @@
                     width: 14.9%;
                     height: 13.5%;
                     right: 15%;
-                    bottom: 13%;                
+                    bottom: 10%;                
                     margin: 0 auto;
                     cursor: pointer;
                     position: absolute;
@@ -625,12 +625,19 @@
                 }
             }
             &__info{
-                display: none;
+                display: block;
                 // min-height: 400px;
                 border: 1px solid $blue;
                 max-width: calc(100% - 10px);
                 margin: 0 auto;
                 padding: 32px 30px 18px;
+
+                img{
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 100%;
+                    max-height: 450px;
+                }
             }
             &__slider{
                 border: 1px solid $brown;
@@ -808,6 +815,11 @@
                         max-width: 390px;
                     }
                 }
+                &__info{
+                    img{
+                        max-height: 370px;
+                    }
+                }
             }
         }
     }
@@ -874,6 +886,14 @@
                             display: none;
                         }
                     }
+
+                    &--active{
+                        .apInfo{
+                            &__info{
+                                display: block;
+                            }
+                        }
+                    }
                 }
                 &__slider{
                     border: 0;
@@ -923,14 +943,19 @@
                     }
                 }
                 &__info{
-                    display: block;
+                    display: none;
                     max-width: 100%;
                     border-color: $brown;
+
+                    img{
+                        max-height: 100%;
+                    }
                 }
                 &__availability{
                     display: none;
                 }
                 &__close{
+                    display: none;
                     margin: 20px 0 0;
                 }
             }
@@ -943,18 +968,18 @@
             .pointers{
                 &__typ01{
                     &:before{
-                        width: 35%;
-                        height: 32%;
-                        left: -55%;
-                        top: 5%;
+                        width: 25%;
+                        height: 21%;
+                        left: -63%;
+                        top: 30%;
                     }
                 }
                 &__typ02{
                     &:before{
-                        width: 35%;
-                        height: 32%;
+                        width: 25%;
+                        height: 21%;
                         right: 6%;
-                        bottom: 1%;
+                        bottom: 3%;
                     }
                 }
             }

@@ -82,14 +82,14 @@ get_header(); ?>
     <section class="mainApartaments section-anchor">
         <div class="mainApartaments__wrap">
             <div class="mainApartaments__photo">
-                <img src="<?php echo get_template_directory_uri() . '/images/frontpage/apartaments.png'; ?>" />
+                <img src="<?php echo get_template_directory_uri() . '/images/frontpage/apartments_new.jpeg'; ?>" />
                 <div class="pointers">
                     <div class="pointers__typ01" data-type="1"></div>
                     <div class="pointers__typ02" data-type="2"></div>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="area" viewBox="0 0 1370 720" fill="none">
-                    <path xmlns="http://www.w3.org/2000/svg" d="M623 120L1 254V552L982 302V224L806 95L623 120Z" fill="white" fill-opacity="0.2" stroke="#BCA58A" stroke-width="2" class="area__floor area__floor--one" data-type="1"/>
-                    <path xmlns="http://www.w3.org/2000/svg" d="M1055 323L1051 393L1031 398L1064 447H1108L1114 488H1097L1128 528L376 721H1.5V597L1055 323Z" fill="white" fill-opacity="0.2" stroke="#BCA58A" stroke-width="2" class="area__floor area__floor--two" data-type="2"/>
+                <svg xmlns="http://www.w3.org/2000/svg" class="area" viewBox="5 -234 1260 700" fill="none">
+                    <path d="M.02 336.28 119.3 322.75 119.3 322.75 120.52 259.55 603.39 217.55 1101.97 229.08 1101.97 336.28 746.73 336.28 606.42 336.28 605.23 389.65 233.2 389.65 .02 363.01 .02 336.28z" class="area__floor area__floor--one" fill="#fff" fill-opacity="0.2" stroke="#BCA58A" stroke-width="2" data-type="1"/>
+                    <path d="M141.24 248.89 141.24 190.97 222.49 173.94 222.49 163.57 201.74 165.83 295.26 104.19 610.51 21.3 822.33 34.06 1101.97 83.14 1101.97 95.05 1101.97 215.9 603.43 201.25 141.24 248.89z" class="area__floor area__floor--two" fill="#fff" fill-opacity="0.2" stroke="#BCA58A" stroke-width="2" data-type="2"/>       
                 </svg>
             </div>
             <div class="mainApartaments__heading">
@@ -106,157 +106,43 @@ get_header(); ?>
                             <h3>TYP II</h3>
                         </div>
                     </div>
-                    <div class="apInfo__type" data-type="1">
+                    <div class="apInfo__type apInfo__type--active" data-type="1">
                         <div class="heading">
                             <h3>TYP I</h3>
                         </div>
                         <div class="content">
                             <div class="apInfo__info">
-                                <div class="apInfo__slider">
-                                    <div class="slide">
-                                        <div class="slide__left">
-                                            <div class="content">
-                                                <p>Powierzchnia: <span class="value">70,23m2</span></p>
-                                                <p>Piętro: <span class="value">1</span></p>
-                                                <p>Pokoje: <span class="value">2</span></p>
-                                            </div>
-                                            <div class="actions">
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/pdf.svg'; ?>"/>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/3dview.svg'; ?>"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="slide__right">
-                                            <img src="<?php echo get_template_directory_uri() . '/images/frontpage/apartament_view.svg'; ?>"/>
-                                            <div class="actions">
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/pdf.svg'; ?>"/>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/3dview.svg'; ?>"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slide">
-                                        <div class="slide__left">
-                                            <div class="content">
-                                                <p>Powierzchnia: <span class="value">70,23m2</span></p>
-                                                <p>Piętro: <span class="value">1</span></p>
-                                                <p>Pokoje: <span class="value">2</span></p>
-                                            </div>
-                                            <div class="actions">
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/pdf.svg'; ?>"/>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/3dview.svg'; ?>"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="slide__right">
-                                            <img src="<?php echo get_template_directory_uri() . '/images/frontpage/apartament_view.svg'; ?>"/>
-                                            <div class="actions">
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/pdf.svg'; ?>"/>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/3dview.svg'; ?>"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="apInfo__availability">
-                                    <a href="#" class="btn">
+                                <img src="<?php echo get_template_directory_uri() . '/images/frontpage/typ_01.jpg'; ?>"/>
+                            </div>
+                            <div class="apInfo__availability">
+                                    <a href="#contact" class="btn">
                                         <span>Zapytaj o dostępność</span>
                                     </a>
                                 </div>
                                 <div class="apInfo__close">
                                     <img src="<?php echo get_template_directory_uri() . '/images/arrow_up_blue.svg'; ?>"/>    
                                 </div>
-                            </div>
                             <div class="content__open">
                                 <img src="<?php echo get_template_directory_uri() . '/images/arrow_down_gold.svg'; ?>"/>
                             </div>
                         </div>
                     </div>
-                    <div class="apInfo__type" data-type="2">
+                    <div class="apInfo__type apInfo__type--active" data-type="2">
                         <div class="heading">
                             <h3>TYP II</h3>
                         </div>
                         <div class="content">
                             <div class="apInfo__info">
-                                <div class="apInfo__slider">
-                                    <div class="slide">
-                                        <div class="slide__left">
-                                            <div class="content">
-                                                <p>Powierzchnia: <span class="value">70,23m2</span></p>
-                                                <p>Piętro: <span class="value">1</span></p>
-                                                <p>Pokoje: <span class="value">2</span></p>
-                                            </div>
-                                            <div class="actions">
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/pdf.svg'; ?>"/>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/3dview.svg'; ?>"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="slide__right">
-                                            <img src="<?php echo get_template_directory_uri() . '/images/frontpage/apartament_view.svg'; ?>"/>
-                                            <div class="actions">
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/pdf.svg'; ?>"/>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/3dview.svg'; ?>"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slide">
-                                        <div class="slide__left">
-                                            <div class="content">
-                                                <p>Powierzchnia: <span class="value">70,23m2</span></p>
-                                                <p>Piętro: <span class="value">1</span></p>
-                                                <p>Pokoje: <span class="value">2</span></p>
-                                            </div>
-                                            <div class="actions">
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/pdf.svg'; ?>"/>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/3dview.svg'; ?>"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="slide__right">
-                                            <img src="<?php echo get_template_directory_uri() . '/images/frontpage/apartament_view.svg'; ?>"/>
-                                            <div class="actions">
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/pdf.svg'; ?>"/>
-                                                </a>
-                                                <a href="#">
-                                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/3dview.svg'; ?>"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="apInfo__availability">
-                                    <a href="#" class="btn">
+                                <img src="<?php echo get_template_directory_uri() . '/images/frontpage/typ_02.jpg'; ?>"/>
+                            </div>
+                            <div class="apInfo__availability">
+                                    <a href="#contact" class="btn">
                                         <span>Zapytaj o dostępność</span>
                                     </a>
                                 </div>
                                 <div class="apInfo__close">
                                     <img src="<?php echo get_template_directory_uri() . '/images/arrow_up_blue.svg'; ?>"/>    
                                 </div>
-                            </div>
                             <div class="content__open">
                                 <img src="<?php echo get_template_directory_uri() . '/images/arrow_down_gold.svg'; ?>"/>
                             </div>

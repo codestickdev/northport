@@ -174,27 +174,30 @@
      * Apartaments info
      */
     $(document).ready(function(){
-
         /**
          * Destkop
          */
-        $('.content__open').on('click', function(){
-            var parent = $(this).parents('.apInfo__type');
-            parent.addClass('apInfo__type--active');
-            parent.find('.apInfo__info').slideDown('slow');
-        });
-        $('.apInfo__close').on('click', function(){
-            var parent = $(this).parents('.apInfo__type');
-            parent.find('.apInfo__info').slideUp('slow');
+        // $('.content__open').on('click', function(){
+        //     var parent = $(this).parents('.apInfo__type');
+        //     parent.addClass('apInfo__type--active');
+        //     parent.find('.apInfo__info').slideDown('slow');
+        // });
+        // $('.apInfo__close').on('click', function(){
+        //     var parent = $(this).parents('.apInfo__type');
+        //     parent.find('.apInfo__info').slideUp('slow');
 
-            setTimeout(function(){
-                parent.removeClass('apInfo__type--active');
-            }, 700);
-        });
+        //     setTimeout(function(){
+        //         parent.removeClass('apInfo__type--active');
+        //     }, 700);
+        // });
 
         /**
          * Mobile
          */
+        if($(window).width() < 991){
+            $('.apInfo__nav').find('.type[data-type="1"]').addClass('active');
+            $('.apInfo__type[data-type="2"]').removeClass('apInfo__type--active');
+        }
         $('.type').on('click', function(){
             var type = $(this).attr('data-type');
             if(!$(this).hasClass('active')){
